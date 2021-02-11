@@ -10,8 +10,10 @@ class Cq extends React.Component {
 change=(event)=>{
   //console.log(event.target.value);
   this.setState({
-    user_index:event.target.value
+    user_index:event.target.value,
+  
   })
+  
 }
 render(){
  
@@ -27,15 +29,15 @@ render(){
                  <div className="col-6 col-sm-6">
 
                    <div className="row">
-                     <div className="col-12 col-sm-12"><h2>Users</h2></div>
+                     <div className="col-12 col-sm-12" style={{background:"#075E54",color:'white'}}><h2>Users</h2></div>
                      </div>
                    <div className="row">
-                     <div className="col-12 col-sm-12">
+                     <div className="col-12 col-sm-12" style={{background:"#ECE5DD"}}>
                          <ul className="list-group">
                         {
-                       this.state.User_arr.map((Ob,index)=>{
+                       this.state.User_arr.map((Ob)=>{
                          return(
-                           <li className="list-group-item" key={Ob.id} value={Ob.id} onClick={this.change}>{Ob.name} </li>
+                           <li  className="list-group-item" key={Ob.id} value={Ob.id} onClick={this.change}>{Ob.name} </li>
                            );
                           })
                         }

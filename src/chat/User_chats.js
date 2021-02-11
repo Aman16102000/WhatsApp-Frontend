@@ -10,7 +10,15 @@ render(){
     
       <div className="row">
           <div className="col-12 col-sm-12">
-              {ob[this.props.index].chats}
+              <ul className="list-group">
+              {
+               ob[this.props.index].chats.map((message,index)=>{
+                   return(
+                       <li className="list-group-item" key={index} >{message}</li>
+                   );
+               })
+              }
+              </ul>
           </div>
       </div>
     
