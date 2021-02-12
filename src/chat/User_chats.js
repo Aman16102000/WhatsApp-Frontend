@@ -8,17 +8,23 @@ class User_chats extends React.Component {
 render(){
   return(
     
-      <div className="row">
-          <div className="col-12 col-sm-12">
-              <ul className="list-group">
+      <div className="row" style={{overflow:'scroll',overflowX:'hidden',height:'500px'}}>
+          <div className="col-6 col-sm-6"></div>
+          <div className="col-6 col-sm-6 ">
+              
               {
                ob[this.props.index].chats.map((message,index)=>{
                    return(
-                       <li className="list-group-item" key={index} >{message}</li>
+                       <div className="row" key={index} style={{border:'10px solid #ECE5DD',borderRadius:'20px',backgroundColor:'#DCF8C6'}} >
+                           <div className="col-12 col-sm-12">
+                               <p>{message}</p>
+                           </div>
+                           
+                       </div>
                    );
                })
               }
-              </ul>
+
           </div>
       </div>
     
